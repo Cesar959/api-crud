@@ -43,16 +43,16 @@ class Usuarios
         if($resposta)
         {
             http_response_code(200);
-            $this->dados['status'] = "Sucesso";
+            $this->dados['status'] = STATUS_SUCESSO;
             $this->dados['metodo'] = $_SERVER['REQUEST_METHOD'];
-            $this->dados['result'] = "Dados Cadastrados com Sucesso";
+            $this->dados['result'] = POST_SUCESSO;
         }
         else
         {
             http_response_code(404);
-            $this->dados['status'] = "error";
+            $this->dados['status'] = STATUS_ERROR;
             $this->dados['metodo'] = $_SERVER['REQUEST_METHOD'];
-            $this->dados['result'] = "Falha ao cadastrar";
+            $this->dados['result'] = POST_ERROR;
         }
 
         return $this->dados;
@@ -69,7 +69,7 @@ class Usuarios
 
         $resposta = $Bd->select($sql, $parametros);
 
-        $this->dados['status'] = "Sucesso";
+        $this->dados['status'] = STATUS_SUCESSO;
         $this->dados['metodo'] = $_SERVER['REQUEST_METHOD'];
         $this->dados['result'] = $resposta;
 
@@ -90,18 +90,19 @@ class Usuarios
 
         $resposta = $Bd->selectID($sql, $parametros);
 
-        $this->dados['status'] = "Sucesso";
-        $this->dados['metodo'] = $_SERVER['REQUEST_METHOD'];
-
         if($resposta)
         {
             http_response_code(200);
+            $this->dados['status'] = STATUS_SUCESSO;
+            $this->dados['metodo'] = $_SERVER['REQUEST_METHOD'];
             $this->dados['result'] = $resposta;
         }
         else
         {
-            http_response_code(200);
-            $this->dados['result'] = "Nem um registro encontrado";
+            http_response_code(404);
+            $this->dados['status'] = STATUS_ERROR;
+            $this->dados['metodo'] = $_SERVER['REQUEST_METHOD'];
+            $this->dados['result'] = GET_ERROR;
         }
 
         return $this->dados;
@@ -122,16 +123,16 @@ class Usuarios
         if($resposta)
         {
             http_response_code(200);
-            $this->dados['status'] = "Sucesso";
+            $this->dados['status'] = STATUS_SUCESSO;
             $this->dados['metodo'] = $_SERVER['REQUEST_METHOD'];
-            $this->dados['result'] = "Dados Excluidos com Sucesso";
+            $this->dados['result'] = DELETE_SUCESSO;
         }
         else
         {
             http_response_code(404);
-            $this->dados['status'] = "error";
+            $this->dados['status'] = STATUS_ERROR;
             $this->dados['metodo'] = $_SERVER['REQUEST_METHOD'];
-            $this->dados['result'] = "Falha ao Excluir";
+            $this->dados['result'] = DELETE_ERROR;
         }
 
         return $this->dados;
@@ -158,16 +159,16 @@ class Usuarios
         if($resposta)
         {
             http_response_code(200);
-            $this->dados['status'] = "Sucesso";
+            $this->dados['status'] = STATUS_SUCESSO;
             $this->dados['metodo'] = $_SERVER['REQUEST_METHOD'];
-            $this->dados['result'] = "O registro foi atualizado";
+            $this->dados['result'] = PUT_SUCESSO;
         }
         else
         {
             http_response_code(404);
-            $this->dados['status'] = "error";
+            $this->dados['status'] = STATUS_ERROR;
             $this->dados['metodo'] = $_SERVER['REQUEST_METHOD'];
-            $this->dados['result'] = "Falha ao Atualizar o registro";
+            $this->dados['result'] = PUT_ERROR;
         }
 
         return $this->dados;

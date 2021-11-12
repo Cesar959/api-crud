@@ -30,8 +30,10 @@ class Bd extends \PDO
             $stmt->bindValue($indice, $valor);
         }
 
+        $stmt->execute();
+
         // Executando e verificando ser a execução foi bem sucedida
-        if($stmt->execute())
+        if($stmt->rowCount() > 0)
         {
             return $mensagem = true;
         }

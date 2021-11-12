@@ -16,27 +16,30 @@ if(!empty($_GET))
     if(Rota::validaRota($dados['rota']) == false)
     {
         http_response_code(400);
-        $result['status'] = "ERROR";
-        $result['mensagem'] = "Rota não valida";
+        $result['status'] = STATUS_ERROR;
+        $result['metodo'] = $_SERVER['REQUEST_METHOD'];
+        $result['result'] = ROTA_INVALIDA;
         exit;
     }
 
     if(Rota::validaMetodo($dados['metodo']) == false)
     {
         http_response_code(400);
-        $result['status'] = "ERROR";
-        $result['mensagem'] = "Metodo não valido";
+        $result['status'] = STATUS_ERROR;
+        $result['metodo'] = $_SERVER['REQUEST_METHOD'];
+        $result['result'] = METODO_ERROR;
         exit;
     }
 
 
     if($dados['rota'] == "usuarios")
     {
+
         $services = new Usuarios;
 
-        switch ($dados['recurso']) 
+        switch ($dados['metodo']) 
         {
-            case 'cadastro':
+            case 'POST':
 
                 $services->nome = filter_input(INPUT_POST, 'nome');
                 $services->idade = filter_input(INPUT_POST, 'idade');
@@ -50,7 +53,7 @@ if(!empty($_GET))
 
                 break;
 
-            case 'listar':
+            case 'GET':
                 
                 if(!empty($dados['identificador']))
                 {
@@ -64,7 +67,7 @@ if(!empty($_GET))
 
                 break;
 
-            case 'atualizar':
+            case 'PUT':
                 parse_str(file_get_contents("php://input"),$putData);
                 
                 $services->idUsuario = filter_var($putData['id']);
@@ -77,17 +80,17 @@ if(!empty($_GET))
 
                 break;
 
-            case 'deletar':
+            case 'DELETE':
                 $services->idUsuario= $dados['identificador'];
                 $resposta = $services->DELETE();
-                $result['result'] = $resposta;
+                $result = $resposta;
                 break;
             
             default:
                 http_response_code(400);
-                $result['status'] = "ERROR";
-                $dados['metodo'] = $_SERVER['REQUEST_METHOD'];
-                $result['mensagem'] = "Recurso não informado";
+                $result['status'] = STATUS_ERROR;
+                $result['metodo'] = $_SERVER['REQUEST_METHOD'];
+                $result['result'] = RECURSO_INFORMADO;
                 break;
         }
     }
@@ -96,23 +99,23 @@ if(!empty($_GET))
         http_response_code(400);
         $result['status'] = "ERROR";
         $result['metodo'] = $_SERVER['REQUEST_METHOD'];
-        $result['mensagem'] = "Informe a rota";
+        $result['result'] = ROTA_INFORMADA;
     }
     else
     {
         http_response_code(400);
         $result['status'] = "ERROR";
         $result['metodo'] = $_SERVER['REQUEST_METHOD'];
-        $result['mensagem'] = "Rota desconhecida";
+        $result['mensagem'] = ROTA_DESCONHECIDA;
     }
 
 }
 else
 {
     http_response_code(400);
-    $result['status'] = "ERROR";
+    $result['status'] = "Infor";
     $result['metodo'] = $_SERVER['REQUEST_METHOD'];
-    $result['mensagem'] = "Nem um parametro passado";
+    $result['result'] = BASEURL . "usuarios";
 }
 
 

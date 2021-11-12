@@ -12,8 +12,8 @@ class Rota
     {
         $dados['metodo'] =  $_SERVER['REQUEST_METHOD'];
         $dados['rota'] =  isset($url[0]) ? $url[0] : "";
-        $dados['recurso'] =  isset($url[1]) ? $url[1] : "";
-        $dados['identificador'] = isset($url[2]) ? $url[2] : "";
+        $dados['identificador'] =  isset($url[1]) ? $url[1] : "";
+        // $dados['identificador'] = isset($url[2]) ? $url[2] : "";
 
         return $dados;
     }
