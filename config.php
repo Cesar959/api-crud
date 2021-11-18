@@ -31,6 +31,7 @@ define("DELETE_ERROR", "Falha ao Excluir");
 
 define("PUT_SUCESSO", "O Registro foi Atualizado com Sucesso");
 define("PUT_ERROR", "Falha na Atualização do Registro");
+define("PUT_ALERTA", "Todos os Campos são obrigatorios");
 
 define("ROTA_DESCONHECIDA" , "Rota Desconhecida");
 define("PARAMETRO" , "Nem um Parametro Passado");

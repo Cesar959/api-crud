@@ -1,0 +1,592 @@
+/* Fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+/* Fontes */
+
+/* Geral */
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container
+{
+    width: 100%;
+    max-width: 1366px;
+    margin: auto;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.fundo
+{
+    background: #F0EFEB;
+}
+
+.azul
+{
+    background: #0B3CE9;
+}
+
+.verde
+{
+    background: #076C05;
+}
+
+.amarelo
+{
+    background: #CACE03;
+}
+
+.vermelho
+{
+    background: #FF0A0A;
+}
+
+
+.color-azul
+{
+    color: #0B3CE9;
+}
+
+.color-verde
+{
+    color: #076C05;
+}
+
+.color-amarelo
+{
+    color: #CACE03;
+}
+
+.color-vermelho
+{
+    color: #FF0A0A;
+}
+/* Geral */
+
+
+/* Menu */
+
+header 
+{
+    width: 100%;
+    min-height: 80px;
+    background: #235789;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header span
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #ffff;
+}
+
+/* Menu */
+
+/* Banner */
+
+#banner
+{
+    margin-top: 30px;
+}
+
+#banner img 
+{
+    max-width: 100%;
+}
+
+/* Banner */
+
+
+
+/* Sobre */
+
+#sobre
+{
+   width: 100%;
+   text-align: left; 
+}
+
+#sobre h2
+{
+    font-family:"Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    margin-top: 40px;
+}
+
+#sobre p 
+{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 20px;
+}
+
+/* Sobre */
+
+
+/* Sobre */
+
+#introducao
+{
+   width: 100%;
+   text-align: left; 
+}
+
+#introducao h2
+{
+    font-family:"Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    margin-top: 60px;
+}
+
+#introducao p 
+{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 20px;
+}
+
+/* Sobre */
+
+
+/* Tecnologia */
+
+#tecnologia
+{
+   width: 100%;
+   text-align: left; 
+}
+
+#tecnologia h2
+{
+    font-family:"Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    margin-top: 60px;
+}
+
+#tecnologia ul
+{
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+#tecnologia ul li
+{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 10px;
+}
+
+/* Tecnologia */
+
+
+/* Metodos */
+
+#metodos
+{
+   width: 100%;
+   text-align: left; 
+}
+
+#metodos h2
+{
+    font-family:"Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    margin-top: 60px;
+}
+
+#metodos p 
+{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 10px;
+}
+
+/* Metodos */
+
+
+/* Rotas */
+
+#rotas
+{
+   width: 100%;
+   text-align: left; 
+}
+
+#rotas h2
+{
+    font-family:"Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    margin-top: 60px;
+}
+
+#rotas p 
+{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 10px;
+}
+
+
+#rotas .grupo-rotas 
+{
+    width: 100%;
+}
+
+#rotas .grupo-rotas .descricao-rota
+{
+    margin-top: 30px !important;
+    margin-bottom: 10px;
+}
+
+#rotas .grupo-rotas .rota
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#rotas .grupo-rotas .rota .metodo
+{
+    width: 10%;
+    padding: 5px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    border-radius: 15px 0 0 15px;
+    color: #fff;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#rotas .grupo-rotas .rota .url
+{
+    width: 90%;
+    background: #fff;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+/* Rotas */
+
+
+/* Mensagens de Status */
+
+#mensagem-status
+{
+   width: 100%;
+   text-align: left; 
+}
+
+#mensagem-status h2
+{
+    font-family:"Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+#mensagem-status p 
+{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 10px;
+}
+
+/* Mensagens de Status */
+
+
+/* Footer */
+
+footer
+{
+    width: 100%;
+    min-height: 133px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    background: #235789;
+}
+
+footer h5
+{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Footer */
+
+
+/* Media Querys */
+
+@media screen and (max-width: 1280px) 
+{
+    header span 
+    {
+        font-size: 32px;
+    }
+
+    #sobre h2 
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    #sobre p
+    {
+        font-size: 18px;
+    }
+
+    #introducao h2 
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    #introducao p
+    {
+        font-size: 18px;
+    }
+
+    #tecnologia h2 
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    #tecnologia p
+    {
+        font-size: 18px;
+    }
+
+    #tecnologia ul li 
+    {
+        font-size: 18px;
+    }
+
+    #metodos  h2 
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    #metodos p
+    {
+        font-size: 18px;
+    }
+
+    #rotas  h2 
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    #rotas p
+    {
+        font-size: 18px;
+    }
+
+    #rotas .grupo-rotas .rota .metodo 
+    {
+        font-size: 24px;
+    }
+
+    #mensagem-status  h2 
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    #mensagem-status p
+    {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 992px) 
+{
+    header span 
+    {
+        font-size: 28px;
+    }
+
+    #sobre h2 
+    {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    #sobre p
+    {
+        font-size: 16px;
+    }
+
+    #introducao h2 
+    {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    #introducao p
+    {
+        font-size: 16px;
+    }
+
+    #tecnologia h2 
+    {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    #tecnologia p
+    {
+        font-size: 16px;
+    }
+
+    #tecnologia ul li 
+    {
+        font-size: 16px;
+    }
+
+    #metodos  h2 
+    {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    #metodos p
+    {
+        font-size: 16px;
+    }
+
+    #rotas  h2 
+    {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    #rotas p
+    {
+        font-size: 16px;
+    }
+
+    #rotas .grupo-rotas .rota .metodo 
+    {
+        font-size: 17px;
+    }
+
+    #rotas .grupo-rotas .rota .url 
+    {
+        padding: 5px;
+    }
+
+    #mensagem-status  h2 
+    {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    #mensagem-status p
+    {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 768px) 
+{
+    header span 
+    {
+        font-size: 25px;
+    }
+
+    #rotas .grupo-rotas .rota .metodo 
+    {
+        width: 15%;
+    }
+
+    #rotas .grupo-rotas .rota .url 
+    {
+        width: 85%;
+    }
+}
+@media screen and (max-width: 600px) 
+{
+
+    #rotas .grupo-rotas .rota .metodo 
+    {
+        width: auto;
+    }
+
+    #rotas .grupo-rotas .rota .url 
+    {
+        width: auto;
+    }
+
+    #rotas .grupo-rotas .rota 
+    {
+        overflow-x: scroll;
+    }
+
+    footer h5 
+    {
+        font-size: 18px;
+    }
+}
+
+

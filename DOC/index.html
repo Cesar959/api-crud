@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação da API Crud </title>
+
+    <!-- Estilo Personalizado -->
+    <link rel="stylesheet" href="estilo.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body class="fundo">
+
+    <header>
+        <span>documentação</span>
+    </header>
+
+    <section id="banner" class="container">
+        <img src="banner-doc-crud.png" alt="">
+    </section>
+
+    <main class="container">
+
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Interface de Programação de Aplicações (português) cuja sigla API provém do Inglês Application Programming Interface, é um conjunto de rotinas e padrões estabelecidos por um software para a utilização das suas funcionalidades. Com o intuito de aprender como desenvolver uma api utilizando o php sem framework.                      </p>
+        </section>
+
+        <section id="introducao">
+            <h2>Introdução</h2>
+            <p>Api conta com 5 funcionalidades básicas: obter todos os registros, selecionar um registro, cadastrar  registros, atualizar o registro e deletar o registro. Até o momento não foi implementado um sistema de autenticação para utilizar a API, possibilitando assim a utilização pública da mesma. </p>
+        </section>
+
+        <section id="tecnologia">
+            <h2>Tecnologias</h2>
+            <ul>
+                <li>PHP 7</li>
+                <li>Url amigável</li>
+                <li>Mysql</li>
+                <li>Json</li>
+            </ul>
+        </section>
+
+        <section id="metodos">
+            <h2>Metodos</h2>
+            <p><span class="color-azul">POST</span> - utilizado para cadastrar</p>
+            <p><span class="color-verde">GET</span> - utilizado para pegar os dados</p>
+            <p><span class="color-amarelo">UPDATE</span> - utilizado para atualizar</p>
+            <p><span class="color-vermelho">DELETE</span> - utilizado para deletar</p>
+        </section>
+
+        <section id="rotas">
+            <h2>Rotas</h2>
+            <p>É utilizada a mesma rota para todos o que diferencia é o método, para GET e  DELETE é utilizado o id_usuario do registro como parâmetro.</p>
+
+            <div class="grupo-rotas">
+                <p class="descricao-rota">Cadastra os dados no banco de dados</p>
+                <div class="rota">
+                    <span class="metodo azul">POST</span>
+                    <p class="url">http://localhost/api_crud/usuarios/</p>
+                </div>
+
+                <p class="descricao-rota">Traz todos os registros</p>
+                <div class="rota">
+                    <span class="metodo verde">GET</span>
+                    <p class="url">http://localhost/api_crud/usuarios/</p>
+                </div>
+
+                <p class="descricao-rota">Traz um registo específico (o caso em questão, vai trazer os dados referente ao id_usuario 2)</p>
+                <div class="rota">
+                    <span class="metodo verde">GET</span>
+                    <p class="url">http://localhost/api_crud/usuarios/2</p>
+                </div>
+
+                <p class="descricao-rota">Atualiza os dados no banco de dados.</p>
+                <div class="rota">
+                    <span class="metodo amarelo">PUT</span>
+                    <p class="url">http://localhost/api_crud/usuarios/</p>
+                </div>
+
+                <p class="descricao-rota">Excluir o registro baseado no id_usuario (o caso em questão, vai excluir os dados referente ao id_usuario 2)</p>
+                <div class="rota">
+                    <span class="metodo vermelho">DELETE</span>
+                    <p class="url">http://localhost/api_crud/usuarios/2</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="mensagem-status">
+            <h2>Mensagens de Status</h2>
+            <p> <span class="color-azul">200 </span>: Requisição foi feita com sucesso.</p>
+            <p><span class="color-amarelo">404</span>: Falha na requisição, possivelmente por falta de envio de dados ou os dados solicitados não existe</p>
+            <p><span class="color-amarelo">400</span>: Recuso não localizado</p>
+            <p><span class="color-vermelho">500</span>: Erro interno do servidor.</p>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <h5>DESENVOLVIMENTO POR </h5>
+        <h5>CESAR DOS SANTOS DE ALMEIDA</h5>
+    </footer>
+    
+</body>
+</html>

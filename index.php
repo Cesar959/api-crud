@@ -70,13 +70,25 @@ if(!empty($_GET))
             case 'PUT':
                 parse_str(file_get_contents("php://input"),$putData);
                 
-                $services->idUsuario = filter_var($putData['id']);
-                $services->nome = filter_var($putData['nome']);
-                $services->idade = filter_var($putData['idade']);
-                $services->sexo = filter_var($putData['sexo']);
-                $services->email = filter_var($putData['email']);
-                $services->senha = filter_var($putData['senha']);
-                $result = $services->PUT();
+                if (!empty($putData['id']) and !empty($putData['nome']) and !empty($putData['idade']) and !empty($putData['sexo']) and !empty($putData['email']) and !empty($putData['senha'])) 
+                {
+
+                    $services->idUsuario = filter_var($putData['id']);
+                    $services->nome = filter_var($putData['nome']);
+                    $services->idade = filter_var($putData['idade']);
+                    $services->sexo = filter_var($putData['sexo']);
+                    $services->email = filter_var($putData['email']);
+                    $services->senha = filter_var($putData['senha']);
+                    $result = $services->PUT();
+
+                }
+                else
+                {
+                    http_response_code(404);
+                    $result['status'] = STATUS_ERROR;
+                    $result['metodo'] = $_SERVER['REQUEST_METHOD'];
+                    $result['result'] = PUT_ALERTA;
+                }
 
                 break;
 
