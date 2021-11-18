@@ -71,6 +71,27 @@
 {
     color: #FF0A0A;
 }
+
+.borda-azul
+{
+    border: 2px solid #0B3CE9;
+}
+
+.borda-verde
+{
+    border: 2px solid #076C05;
+}
+
+.borda-amarelo
+{
+    border: 2px solid #CACE03;
+}
+
+.borda-vermelho
+{
+    border: 2px solid #FF0A0A;
+}
+
 /* Geral */
 
 
@@ -293,7 +314,7 @@ header span
 #rotas .grupo-rotas .rota .metodo
 {
     width: 10%;
-    padding: 5px;
+    padding: 7px;
     font-family: "Open Sans";
     font-style: normal;
     font-weight: 600;
@@ -447,6 +468,7 @@ footer h5
     #rotas .grupo-rotas .rota .metodo 
     {
         font-size: 24px;
+        padding: 9px;
     }
 
     #mensagem-status  h2 
@@ -530,6 +552,7 @@ footer h5
     #rotas .grupo-rotas .rota .metodo 
     {
         font-size: 17px;
+        padding: 7px;
     }
 
     #rotas .grupo-rotas .rota .url 
@@ -567,17 +590,6 @@ footer h5
 }
 @media screen and (max-width: 600px) 
 {
-
-    #rotas .grupo-rotas .rota .metodo 
-    {
-        width: auto;
-    }
-
-    #rotas .grupo-rotas .rota .url 
-    {
-        width: auto;
-    }
-
     #rotas .grupo-rotas .rota 
     {
         overflow-x: scroll;
@@ -586,6 +598,30 @@ footer h5
     footer h5 
     {
         font-size: 18px;
+    }
+}
+@media screen and (max-width: 475px)
+{
+    #rotas .grupo-rotas .rota .metodo 
+    {
+        width: 100%;
+    }
+
+    #rotas .grupo-rotas .rota .url 
+    {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 360px)
+{
+    #rotas .grupo-rotas .rota .metodo 
+    {
+        width: auto;
+    }
+
+    #rotas .grupo-rotas .rota .url 
+    {
+        width: auto;
     }
 }
 
