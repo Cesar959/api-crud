@@ -119,7 +119,7 @@ Este projeto está licenciado sob a licença MIT - consulte o arquivo  [LICENSE.
 ## Links
 
 * [Demo do projeto](http://csantosalmeida.rf.gd/api_crud/usuarios/) - Link da Demo
-* [Documentação](https://cesar959.github.io/api-crud/index.html) - Link da Documentação
+* [Documentação](https://cesar959.github.io/api-crud/) - Link da Documentação
 
 
 
