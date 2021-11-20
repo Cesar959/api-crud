@@ -29,22 +29,30 @@ Cadastra os dados no banco de dados
 ### GET
 Traz todos os registros
 
-``` /api_crud/usuarios/```
+```bash  
+/api_crud/usuarios/
+```
 
 ### GET
 Traz um registo específico (o caso em questão, vai trazer os dados referente ao id_usuarios 2)
 
-``` /api_crud/usuarios/2```
+```bash  
+/api_crud/usuarios/2
+```
 
 ### PUT
 Atualiza os dados no banco de dados. **Aviso:** na atualização do registro é obrigatorio o envio de todos os dados (id_usuarios, nome, idade, sexo, email, senha) mesmo aqueles que não sofrerão alteraçãoes. 
 
-``` /api_crud/usuarios/```
+```bash  
+/api_crud/usuarios/
+```
 
 ### DELETE
 Excluir o registro baseado no id_usuarios (o caso em questão, vai excluir os dados referente ao id_usuarios 2)
 
-``` /api_crud/usuarios/2```
+```bash  
+/api_crud/usuarios/2
+```
 
 
 ## Instalação Local
@@ -55,19 +63,37 @@ Por meio dele sera baixado todas as depedencias do projeto, depois de instalado 
 
 1) Para baixa todas as dependencias do projeto
 
-``` composer update ```
+```bash  
+composer update 
+```
 
 2) Efetuar o carregamento automatico das class
 
-``` composer dump-autoload ```
+```bash  
+composer dump-autoload 
+```
 
 3) Edite as configurações padrão do arquivo config.php
 
-``` define("HOST","localhost"); ```
-``` define("BANCO","crud-container"); ```
-``` define("USUARIO","root"); ```
-``` define("SENHA",""); ```
-``` define("BASEURL", "http://localhost/api_crud/"); ```
+```bash  
+define("HOST","localhost"); 
+```
+
+```bash  
+define("BANCO","crud-container"); 
+```
+
+```bash  
+define("USUARIO","root"); 
+```
+
+```bash  
+define("SENHA",""); 
+```
+
+```bash  
+define("BASEURL", "http://localhost/api_crud/"); 
+```
 
 
 ## Status do Projeto
