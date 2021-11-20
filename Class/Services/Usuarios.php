@@ -88,7 +88,7 @@ class Usuarios
 
         $sql = "SELECT * FROM usuarios WHERE id_usuarios = :ID";
 
-        $resposta = $Bd->selectID($sql, $parametros);
+        $resposta = $Bd->selectId($sql, $parametros);
 
         if($resposta)
         {

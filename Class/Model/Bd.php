@@ -65,7 +65,7 @@ class Bd extends \PDO
     }
 
     // Respnsavel por selecionar os dados no banco de dados e trazer eles em formato de array
-    public function selectID($sql, $parametros = array())
+    public function selectId($sql, $parametros = array())
     {
         // Preparando a instrução sql
         $stmt = $this->prepare($sql);
