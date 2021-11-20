@@ -41,11 +41,11 @@ if(!empty($_GET))
         {
             case 'POST':
 
-                $services->nome = filter_input(INPUT_POST, 'nome');
-                $services->idade = filter_input(INPUT_POST, 'idade');
-                $services->sexo = filter_input(INPUT_POST, 'sexo');
-                $services->email = filter_input(INPUT_POST, 'email');
-                $services->senha = filter_input(INPUT_POST, 'senha');
+                $services->nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+                $services->idade = filter_input(INPUT_POST, 'idade', FILTER_SANITIZE_NUMBER_INT);
+                $services->sexo = filter_input(INPUT_POST, 'sexo', FILTER_SANITIZE_SPECIAL_CHARS);
+                $services->email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+                $services->senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
 
                 $resposta = $services->POST();
 
@@ -73,12 +73,12 @@ if(!empty($_GET))
                 if (!empty($putData['id']) and !empty($putData['nome']) and !empty($putData['idade']) and !empty($putData['sexo']) and !empty($putData['email']) and !empty($putData['senha'])) 
                 {
 
-                    $services->idUsuario = filter_var($putData['id']);
-                    $services->nome = filter_var($putData['nome']);
-                    $services->idade = filter_var($putData['idade']);
-                    $services->sexo = filter_var($putData['sexo']);
-                    $services->email = filter_var($putData['email']);
-                    $services->senha = filter_var($putData['senha']);
+                    $services->idUsuario = filter_var($putData['id'], FILTER_SANITIZE_NUMBER_INT);
+                    $services->nome = filter_var($putData['nome'], FILTER_SANITIZE_SPECIAL_CHARS);
+                    $services->idade = filter_var($putData['idade'] , FILTER_SANITIZE_NUMBER_INT);
+                    $services->sexo = filter_var($putData['sexo'], FILTER_SANITIZE_SPECIAL_CHARS);
+                    $services->email = filter_var($putData['email'], FILTER_SANITIZE_EMAIL);
+                    $services->senha = filter_var($putData['senha'], FILTER_SANITIZE_SPECIAL_CHARS);
                     $result = $services->PUT();
 
                 }
