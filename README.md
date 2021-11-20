@@ -22,7 +22,9 @@ Para isso foi utilizando o PHP para realizar execução de instruções SQL no b
 ### POST
 Cadastra os dados no banco de dados
 
-``` /api_crud/usuarios/```
+```bash 
+/api_crud/usuarios/
+```
 
 ### GET
 Traz todos os registros
