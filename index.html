@@ -31,7 +31,7 @@
 
         <section id="introducao">
             <h2>Introdução</h2>
-            <p>Api conta com 5 funcionalidades básicas: obter todos os registros, selecionar um registro, cadastrar  registros, atualizar o registro e deletar o registro. Até o momento não foi implementado um sistema de autenticação para utilizar a API, possibilitando assim a utilização pública da mesma. </p>
+            <p>API conta com 5 funcionalidades básicas: obter todos os registros, selecionar um unico registro, cadastrar registro, atualizar o registro e deletar o registro. Até o momento não foi implementado um sistema de autenticação para utilizar a API, possibilitando assim a utilização pública da mesma.</p>
         </section>
 
         <section id="tecnologia">
@@ -54,7 +54,7 @@
 
         <section id="rotas">
             <h2>Rotas</h2>
-            <p>É utilizada a mesma rota para todos o que diferencia é o método, para GET e  DELETE é utilizado o id_usuario do registro como parâmetro.</p>
+            <p>É a mesma rota para todos o que diferencia é o método, para GET e DELETE é utilizado o id_usuario do registro como parâmetro. Alem disso o unico serviço disponivel até o momento é "usuarios".</p>
 
             <div class="grupo-rotas">
                 <p class="descricao-rota">Cadastra os dados no banco de dados</p>
@@ -75,7 +75,7 @@
                     <p class="url borda-verde">http://localhost/api_crud/usuarios/2</p>
                 </div>
 
-                <p class="descricao-rota">Atualiza os dados no banco de dados.</p>
+                <p class="descricao-rota">Atualiza os dados no banco de dados. <strong>Aviso:</strong> na atualização do registro é obrigatorio o envio de todos os dados (id_usuarios, nome, idade, sexo, email, senha) mesmo aqueles que não sofrerão alteraçãoes.</p>
                 <div class="rota">
                     <span class="metodo amarelo">PUT</span>
                     <p class="url borda-amarelo">http://localhost/api_crud/usuarios/</p>
