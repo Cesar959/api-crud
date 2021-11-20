@@ -13,7 +13,7 @@ O projeto é uma API aonde  é  possível cadastrar, alterar, ler e excluir usua
 
 API conta com 5 funcionalidades básicas: obter todos os registros, selecionar um unico registro, cadastrar registro, atualizar o registro e deletar o registro. Até o momento não foi implementado um sistema de autenticação para utilizar a API, possibilitando assim a utilização pública da mesma. 
 
-Para isso foi utilizando o PHP para realizar execução de instruções SQL no banco de dados phpMyAdmin, além disso foi utilizado POO (Programação Orientada a Objetos), PDO (PHP Data Object) e DAO (Data Access Object) na construção das class. Na arquitetura do projeto foi o Composer para fazer autoload das class. Na pasta DOC você encontra todo o planejamento do projeto como o desenho da modelagem do banco de dados, diagrama UML das class utilizadas e o próprio banco de dados exportado. 
+Para isso foi utilizando o PHP para realizar execução de instruções SQL no banco de dados phpMyAdmin, além disso foi utilizado POO (Programação Orientada a Objetos) e PDO (PHP Data Object) na construção das class. Na arquitetura do projeto foi usado o Composer para fazer autoload das class e o htaccess que  permite usar as URLs amigaveis. Na pasta DOC você encontra todo o planejamento do projeto como o desenho da modelagem do banco de dados  e o próprio banco de dados exportado. 
  
 ## Rotas:
 
