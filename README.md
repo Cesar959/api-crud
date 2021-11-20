@@ -23,35 +23,35 @@ Para isso foi utilizando o PHP para realizar execução de instruções SQL no b
 Cadastra os dados no banco de dados
 
 ```bash 
-/api_crud/usuarios/
+https://seudominio.com/api_crud/usuarios/
 ```
 
 ### GET
 Traz todos os registros
 
 ```bash  
-/api_crud/usuarios/
+https://seudominio.com/api_crud/usuarios/
 ```
 
 ### GET
 Traz um registo específico (o caso em questão, vai trazer os dados referente ao id_usuarios 2)
 
 ```bash  
-/api_crud/usuarios/2
+https://seudominio.com/api_crud/usuarios/2
 ```
 
 ### PUT
 Atualiza os dados no banco de dados. **Aviso:** na atualização do registro é obrigatorio o envio de todos os dados (id_usuarios, nome, idade, sexo, email, senha) mesmo aqueles que não sofrerão alteraçãoes. 
 
 ```bash  
-/api_crud/usuarios/
+https://seudominio.com/api_crud/usuarios/
 ```
 
 ### DELETE
 Excluir o registro baseado no id_usuarios (o caso em questão, vai excluir os dados referente ao id_usuarios 2)
 
 ```bash  
-/api_crud/usuarios/2
+https://seudominio.com/api_crud/usuarios/2
 ```
 
 
