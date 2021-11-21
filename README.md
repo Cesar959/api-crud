@@ -1,15 +1,15 @@
-<h1 align="center"> API Crud </h1>
+<h1 align="center"> API RESTful Crud </h1>
 
 <p align="center">
     <img src="DOC/banner-doc-crud.png" alt="imagem-site" width="600" height="auto">
 </p>
 
 
-Projeto API Crud (Create, Read, Update, Delete)
+Projeto API RESTful Crud (Create, Read, Update, Delete)
 
 ## Descrição
 
-O projeto é uma API aonde  é  possível cadastrar, alterar, ler e excluir usuarios. Interface de Programação de Aplicações (português) cuja sigla API provém do Inglês Application Programming Interface, é um conjunto de rotinas e padrões estabelecidos por um software para a utilização das suas funcionalidades. 
+O projeto é uma API RESTful aonde  é  possível cadastrar, alterar, ler e excluir usuarios. Interface de Programação de Aplicações (português) cuja sigla API provém do Inglês Application Programming Interface, é um conjunto de rotinas e padrões estabelecidos por um software para a utilização das suas funcionalidades. 
 
 API conta com 5 funcionalidades básicas: obter todos os registros, selecionar um unico registro, cadastrar registro, atualizar o registro e deletar o registro. Até o momento não foi implementado um sistema de autenticação para utilizar a API, possibilitando assim a utilização pública da mesma. 
 
